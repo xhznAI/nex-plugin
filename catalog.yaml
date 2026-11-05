@@ -9,12 +9,21 @@ tags:
   research:
     en: Research
     zh: 科研
+  learning:
+    en: Learning
+    zh: 学习
+  writing:
+    en: Writing
+    zh: 写作
   productivity:
     en: Productivity
     zh: 办公效率
   automation:
     en: Automation
     zh: 自动化
+  creativity:
+    en: Creativity
+    zh: 创意
   creator:
     en: Content Creation
     zh: 自媒体
