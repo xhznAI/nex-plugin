@@ -1,0 +1,30 @@
+name: 推荐插件
+description: 推荐社区插件或提交自研插件
+title: "[收录] "
+body:
+  - type: input
+    id: source
+    attributes:
+      label: 插件来源
+      description: npm 包名或公开 GitHub 仓库地址
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 用途和推荐理由
+      description: 适合什么任务，解决了什么问题
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: 使用情况
+      description: 实际使用情况及已知限制；尚未测试请写明
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: 与作者的关系
+      placeholder: 原作者、维护者或使用者

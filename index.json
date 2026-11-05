@@ -1,0 +1,63 @@
+{
+  "format": 1,
+  "title": {
+    "en": "Nex Curated Plugins",
+    "zh": "Nex 精选插件"
+  },
+  "description": {
+    "en": "Independently distributed plugins selected for Nex Assistant.",
+    "zh": "为 Nex Assistant 精选的插件，按需安装，独立更新。"
+  },
+  "metadata": {
+    "categories": {
+      "research": {
+        "title": {
+          "en": "Research",
+          "zh": "科研"
+        }
+      },
+      "productivity": {
+        "title": {
+          "en": "Productivity",
+          "zh": "办公效率"
+        }
+      },
+      "development": {
+        "title": {
+          "en": "Development",
+          "zh": "开发工具"
+        }
+      },
+      "media": {
+        "title": {
+          "en": "Media",
+          "zh": "媒体创作"
+        }
+      },
+      "integration": {
+        "title": {
+          "en": "Integrations",
+          "zh": "外部服务"
+        }
+      }
+    },
+    "labels": {
+      "official": {
+        "title": {
+          "en": "By Nex",
+          "zh": "官方开发"
+        }
+      },
+      "community": {
+        "title": {
+          "en": "Community Pick",
+          "zh": "社区推荐"
+        }
+      }
+    }
+  },
+  "plugins": [],
+  "nex": {
+    "schemaVersion": 1
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "nex-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Nex 精选插件目录、收录工具与 DSH 标准索引生成器",
+  "license": "MIT",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=24.12.0 <25"
+  },
+  "scripts": {
+    "plugin:add": "node src/cli.ts add",
+    "plugin:inspect": "node src/cli.ts inspect",
+    "plugin:readme": "node src/cli.ts readme",
+    "validate": "node src/cli.ts validate",
+    "build": "node src/cli.ts build",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.ts",
+    "check": "corepack pnpm typecheck && corepack pnpm test && corepack pnpm validate"
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-plugin-detail": "0.2.2-rc.1",
+    "@deepseek-ai/dsh-plugin-market-index": "0.2.2-rc.1",
+    "resolve.exports": "2.0.3",
+    "semver": "7.8.5",
+    "yaml": "2.8.1",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@types/semver": "7.8.0",
+    "typescript": "6.0.3"
+  }
+}

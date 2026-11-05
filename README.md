@@ -1,0 +1,86 @@
+# Nex 精选插件
+
+Nex 维护推荐名单，插件由原作者在 GitHub 或 npm 发布。精选仓库只登记来源、分类和推荐理由；基础资料自动从上游读取。
+
+## 收录一个插件
+
+在 plugins 中新增一份 YAML 即可：
+
+~~~yaml
+source: "@author/dsh-example"
+category: research
+recommendation: "适合文献阅读和资料整理。"
+~~~
+
+GitHub 来源使用仓库地址：
+
+~~~yaml
+source: https://github.com/author/dsh-example
+category: media
+~~~
+
+以上为示例地址。自研插件可添加 origin: official；单仓库多包可添加 path: packages/example。文件名自定，包名、作者、简介、图标和版本无需人工填写。
+
+也可以使用命令确认来源后生成清单：
+
+~~~bash
+fnm use
+corepack pnpm install --frozen-lockfile
+corepack pnpm plugin:add @author/dsh-example --category research
+corepack pnpm plugin:add https://github.com/author/dsh-example --category media --origin official
+~~~
+
+## 信息从哪里来
+
+| 内容 | 来源 |
+| --- | --- |
+| 收录与否、分类、推荐理由、排序 | 本仓库的精选清单 |
+| 包名、作者、许可证、主页 | 原包的 package.json |
+| 名称、简介、图标 | 原包的 locale 元数据及 package.json |
+| npm 版本、发布时间和兼容范围 | npm registry 及对应版本 manifest |
+| GitHub 版本和提交 | 仓库默认分支的 package.json 与实际提交 |
+| 详细介绍、使用方法及配图 | 原包的 meta.detail、README，或原仓库 README |
+| 实际安装内容 | npm 或原 GitHub 仓库 |
+
+详情读取复用 DSH 的公开 plugin-detail 库：优先语言文件指定的 meta.detail，其次包 README，最后尝试原仓库 README。README 不保存到收录清单，也不从其自由文本推断安装版本。
+
+## 检查与生成
+
+~~~bash
+corepack pnpm check
+corepack pnpm build
+corepack pnpm plugin:inspect plugins/实际文件名.yaml
+corepack pnpm plugin:readme plugins/实际文件名.yaml --language zh
+~~~
+
+check 检查类型、测试和精选清单，不需要外网。build 联网读取来源，生成根目录 index.json。生成文件可以提交到 Git 仓库，不需要手工修改。
+
+索引遵循 DSH format 1，并通过 DSH 官方校验器验证。npm 来源列出仍可用的公开 bundle 版本；GitHub 来源跟随默认分支，并在每次生成时固定到完整提交。安装参数使用索引内的精确版本或提交，实际兼容性由 DSH 安装器再次检查。条目的 nex 扩展保存推荐理由、来源归属及上游许可证信息。
+
+任何启用来源读取失败时，构建失败并保留原 index.json，不会以空条目覆盖旧目录。新增版本由后续构建自动发现，无需逐版本填写或批准。
+
+## 客户端读取
+
+公开仓库可直接通过 GitHub Raw 提供根目录 index.json，地址形式为：
+
+~~~text
+https://raw.githubusercontent.com/<owner>/nex-plugin/main/index.json
+~~~
+
+具体地址在远程仓库创建后确定。客户端读取索引，再通过 DSH 原生安装与详情接口访问原包或仓库。需要使用能直接返回 JSON 的地址，避免重定向。
+
+Check 流水线在推送和 PR 上执行检查与联网构建。Sync index 流水线在 main 的来源清单或工具变化、手动触发以及每日定时运行时，重新生成并提交 index.json；仅文件内容变化时提交。它使用 GitHub 内置令牌，不需要单独的对象存储服务。若 main 禁止机器人直接提交，可手动运行 build 后通过普通 PR 更新索引。
+
+## 下架与贡献
+
+删除收录文件，或添加 enabled: false，下一次构建就会移除该条目。客户端已安装的插件继续由本机管理。
+
+投稿方式与字段见 [贡献说明](CONTRIBUTING.md)。examples 仅提供格式示例，不参与索引。
+
+## 参考模式
+
+- [DSH 社区精选仓库](https://github.com/DshMarketPlace/awesome-dsh-plugin)：维护推荐来源，由脚本同步资料。
+- [dshworks 插件目录](https://github.com/dshworks/awesome-dsh-plugins)：从 npm 获取发布信息，生成 DSH 标准索引。
+- [DSH 插件索引说明](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/user/guide/plugin-market.md)：标准索引、来源和客户端行为。
+
+工具代码采用 MIT。收录不改变原插件的作者、归属或许可证。

@@ -1,0 +1,23 @@
+schemaVersion: 1
+title:
+  en: Nex Curated Plugins
+  zh: Nex 精选插件
+description:
+  en: Independently distributed plugins selected for Nex Assistant.
+  zh: 为 Nex Assistant 精选的插件，按需安装，独立更新。
+categories:
+  research:
+    en: Research
+    zh: 科研
+  productivity:
+    en: Productivity
+    zh: 办公效率
+  development:
+    en: Development
+    zh: 开发工具
+  media:
+    en: Media
+    zh: 媒体创作
+  integration:
+    en: Integrations
+    zh: 外部服务
