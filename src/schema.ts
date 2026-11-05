@@ -35,14 +35,16 @@ export const configSchema = z.object({
   schemaVersion: z.literal(1),
   title: localizedText,
   description: localizedText,
-  categories: z.record(localizedText).refine(value => Object.keys(value).length > 0, '至少配置一个分类'),
+  tags: z.record(localizedText).refine(value => Object.keys(value).length > 0, '至少配置一个标签')
+    .refine(value => Object.keys(value).every(id => /^[a-z][a-z0-9-]*$/.test(id) && id !== 'all'), '标签标识使用小写英文、数字和连字符，不能使用 all'),
 }).strict();
 
 /** 清单只保存我们的选择，版本和介绍始终由来源生成。 */
 export const entrySchema = z.object({
   source: sourceSchema,
   path: packagePath.optional(),
-  category: text,
+  tags: z.array(text).min(1, '至少选择一个标签').max(3, '每个插件最多三个标签')
+    .refine(tags => new Set(tags).size === tags.length, '标签不能重复'),
   recommendation: z.string().trim().default(''),
   origin: z.enum(['official', 'community']).default('community'),
   enabled: z.boolean().default(true),
@@ -65,7 +67,7 @@ export function sourceKey(entry: Pick<Entry, 'source' | 'path'>): string {
 export function validateEntries(config: CatalogConfig, entries: Entry[]): void {
   const keys = new Set<string>();
   for (const entry of entries) {
-    if (!Object.hasOwn(config.categories, entry.category)) throw new Error('未声明的分类: ' + entry.category);
+    for (const tag of entry.tags) if (!Object.hasOwn(config.tags, tag)) throw new Error('未声明的标签: ' + tag);
     const key = sourceKey(entry);
     if (keys.has(key)) throw new Error('来源重复收录: ' + key);
     keys.add(key);

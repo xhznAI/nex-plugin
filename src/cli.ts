@@ -12,7 +12,7 @@ const root = fileURLToPath(new URL('..', import.meta.url));
 const help = [
   'Nex 精选插件：维护来源清单，自动读取上游资料。',
   '',
-  'corepack pnpm plugin:add <npm包名或GitHub仓库地址> --category <分类> [--origin official] [--path packages/example]',
+  'corepack pnpm plugin:add <npm包名或GitHub仓库地址> --tag <标签> [--tag <标签>] [--origin official] [--path packages/example]',
   'corepack pnpm plugin:inspect plugins/<文件>.yaml',
   'corepack pnpm plugin:readme plugins/<文件>.yaml [--language zh]',
   'corepack pnpm validate',
@@ -26,20 +26,20 @@ async function main(): Promise<void> {
   const { values, positionals } = parseArgs({
     allowPositionals: true, strict: true,
     options: {
-      help: { type: 'boolean' }, path: { type: 'string' }, category: { type: 'string' },
+      help: { type: 'boolean' }, path: { type: 'string' }, tag: { type: 'string', multiple: true },
       origin: { type: 'string' }, language: { type: 'string' }, reason: { type: 'string' },
     },
   });
   if (values.help || !positionals.length) { process.stdout.write(help + '\n'); return; }
   const [command, input, ...extra] = positionals;
   if (extra.length) throw new Error('多余的位置参数');
-  const allowed = command === 'add' ? ['path', 'category', 'origin', 'reason'] : command === 'readme' ? ['language'] : [];
+  const allowed = command === 'add' ? ['path', 'tag', 'origin', 'reason'] : command === 'readme' ? ['language'] : [];
   for (const key of Object.keys(values)) if (!allowed.includes(key)) throw new Error('此命令不接受 --' + key);
   if (command === 'add') {
     if (!input) throw new Error('缺少插件来源');
     const { config, entries } = await loadCatalog(root);
     const entry = entrySchema.parse({
-      source: input, category: values.category, origin: values.origin ?? 'community',
+      source: input, tags: values.tag ?? [], origin: values.origin ?? 'community',
       ...(values.path ? { path: values.path } : {}), recommendation: values.reason ?? '',
     });
     validateEntries(config, [...entries, entry]);
@@ -49,7 +49,7 @@ async function main(): Promise<void> {
     if (Buffer.byteLength(basename + '.yaml') > 240) throw new Error('来源路径过长，请手动建立简短文件名的清单');
     const file = join(root, 'plugins', basename + '.yaml');
     const record = {
-      source: entry.source, ...(entry.path ? { path: entry.path } : {}), category: entry.category,
+      source: entry.source, ...(entry.path ? { path: entry.path } : {}), tags: entry.tags,
       ...(entry.origin !== 'community' ? { origin: entry.origin } : {}),
       ...(entry.recommendation ? { recommendation: entry.recommendation } : {}),
     };

@@ -7,7 +7,7 @@ Nex 维护者决定精选清单的收录范围，可以直接在 plugins 中添�
 | 字段 | 必填 | 说明 |
 | --- | --- | --- |
 | source | 是 | npm 包名或公开 GitHub 仓库 URL |
-| category | 是 | catalog.yaml 中的分类 |
+| tags | 是 | catalog.yaml 中一至三个不重复的用途标签；例如 [research] 或 [media, creator] |
 | recommendation | 否 | 我们的推荐理由 |
 | origin | 否 | 开发者归属：community（社区开发，默认）或 official（Nex 自研）；两者均由 Nex 精选 |
 | path | 否 | GitHub 仓库内的包目录 |
@@ -35,7 +35,7 @@ corepack pnpm build
 
 上游发布新版本、更新介绍后，重新运行 build 即可。无需新增版本记录，也无需修改精选清单。
 
-更换推荐来源、调整分类或推荐理由，直接修改对应清单并提交 PR。移除条目时删除文件或设置 enabled: false。
+更换推荐来源、调整标签或推荐理由，直接修改对应清单并提交 PR。新增标签须先在 catalog.yaml 声明中英文名称；上游关键词不自动成为分类标签。移除条目时删除文件或设置 enabled: false。
 
 ## 自动同步
 

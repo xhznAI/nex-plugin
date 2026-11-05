@@ -24,6 +24,11 @@ body:
     validations:
       required: true
   - type: input
+    id: tags
+    attributes:
+      label: 建议标签（最多三个）
+      description: 例如科研、自媒体、音视频、办公效率、自动化、界面增强；最终由维护者确认
+  - type: input
     id: author
     attributes:
       label: 与作者的关系

@@ -50,7 +50,7 @@ export async function buildIndex(
     const { keywords, license, ...plugin } = upstream;
     plugins.push({
       ...plugin,
-      metadata: { category: entry.category, labels: [entry.origin], keywords },
+      metadata: { category: entry.tags[0], labels: entry.tags, keywords },
       nex: {
         source: entry.source, ...(entry.path ? { path: entry.path } : {}),
         origin: entry.origin, recommendation: entry.recommendation,
@@ -63,11 +63,8 @@ export async function buildIndex(
     title: config.title,
     description: config.description,
     metadata: {
-      categories: Object.fromEntries(Object.entries(config.categories).map(([id, title]) => [id, { title }])),
-      labels: {
-        official: { title: { en: 'By Nex', zh: 'Nex 自研' } },
-        community: { title: { en: 'Community', zh: '社区开发' } },
-      },
+      categories: Object.fromEntries(Object.entries(config.tags).map(([id, title]) => [id, { title }])),
+      labels: Object.fromEntries(Object.entries(config.tags).map(([id, title]) => [id, { title }])),
     },
     plugins,
     nex: { schemaVersion: 1 },

@@ -22,16 +22,40 @@
           "zh": "办公效率"
         }
       },
+      "automation": {
+        "title": {
+          "en": "Automation",
+          "zh": "自动化"
+        }
+      },
+      "creator": {
+        "title": {
+          "en": "Content Creation",
+          "zh": "自媒体"
+        }
+      },
       "development": {
         "title": {
           "en": "Development",
           "zh": "开发工具"
         }
       },
+      "interface": {
+        "title": {
+          "en": "Interface Enhancements",
+          "zh": "界面增强"
+        }
+      },
       "media": {
         "title": {
-          "en": "Media",
-          "zh": "媒体创作"
+          "en": "Audio & Video",
+          "zh": "音视频"
+        }
+      },
+      "data": {
+        "title": {
+          "en": "Data Analysis",
+          "zh": "数据分析"
         }
       },
       "integration": {
@@ -42,16 +66,58 @@
       }
     },
     "labels": {
-      "official": {
+      "research": {
         "title": {
-          "en": "By Nex",
-          "zh": "Nex 自研"
+          "en": "Research",
+          "zh": "科研"
         }
       },
-      "community": {
+      "productivity": {
         "title": {
-          "en": "Community",
-          "zh": "社区开发"
+          "en": "Productivity",
+          "zh": "办公效率"
+        }
+      },
+      "automation": {
+        "title": {
+          "en": "Automation",
+          "zh": "自动化"
+        }
+      },
+      "creator": {
+        "title": {
+          "en": "Content Creation",
+          "zh": "自媒体"
+        }
+      },
+      "development": {
+        "title": {
+          "en": "Development",
+          "zh": "开发工具"
+        }
+      },
+      "interface": {
+        "title": {
+          "en": "Interface Enhancements",
+          "zh": "界面增强"
+        }
+      },
+      "media": {
+        "title": {
+          "en": "Audio & Video",
+          "zh": "音视频"
+        }
+      },
+      "data": {
+        "title": {
+          "en": "Data Analysis",
+          "zh": "数据分析"
+        }
+      },
+      "integration": {
+        "title": {
+          "en": "Integrations",
+          "zh": "外部服务"
         }
       }
     }
@@ -204,7 +270,8 @@
       "metadata": {
         "category": "productivity",
         "labels": [
-          "community"
+          "productivity",
+          "automation"
         ],
         "keywords": [
           "dsh-plugin",
@@ -604,7 +671,7 @@
       "metadata": {
         "category": "research",
         "labels": [
-          "community"
+          "research"
         ],
         "keywords": [
           "zotero",

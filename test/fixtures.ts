@@ -5,7 +5,7 @@ import type { Entry, ResolvedPlugin } from '../src/schema.ts';
 
 export const config = configSchema.parse({
   schemaVersion: 1, title: { en: 'Nex', zh: 'Nex 精选' }, description: '测试目录',
-  categories: { research: { en: 'Research', zh: '科研' } },
+  tags: { research: { en: 'Research', zh: '科研' }, automation: { en: 'Automation', zh: '自动化' }, productivity: { en: 'Productivity', zh: '办公效率' } },
 });
 export const manifest = {
   name: '@example/paper', version: '1.2.0', description: '论文阅读',
@@ -16,7 +16,7 @@ export const manifest = {
   keywords: ['paper'],
 };
 export function makeEntry(overrides: Partial<Entry> = {}): Entry {
-  return entrySchema.parse({ source: '@example/paper', category: 'research', ...overrides });
+  return entrySchema.parse({ source: '@example/paper', tags: ['research'], ...overrides });
 }
 export function makePlugin(name = '@example/paper'): ResolvedPlugin {
   return {

@@ -9,7 +9,7 @@ import { buildIndex, entryPath, loadCatalog, parseYaml, validationUrl, writeInde
 import { entrySchema, sourceKey } from '../src/schema.ts';
 import { config, makeEntry, makePlugin } from './fixtures.ts';
 
-test('来源清单只需地址和分类，基础资料与版本由解析器提供', async () => {
+test('来源清单只需地址和标签，基础资料与版本由解析器提供', async () => {
   const entry = makeEntry({ recommendation: '用于整理文献。' });
   assert.equal('versions' in entry, false);
   const index = await buildIndex(config, [entry], async () => makePlugin());
@@ -36,11 +36,24 @@ test('停用条目不发送上游请求，索引中也不保留它', async () =>
   assert.deepEqual(index.plugins, []);
 });
 
-test('来源、解析后的包身份和分类的冲突都明确失败', async () => {
+test('来源、解析后的包身份和标签的冲突都明确失败', async () => {
   const resolve = async () => makePlugin();
   await assert.rejects(buildIndex(config, [makeEntry(), makeEntry()], resolve), /重复收录/);
   await assert.rejects(buildIndex(config, [makeEntry(), makeEntry({ source: 'https://github.com/example/paper' })], resolve), /同一个包/);
-  await assert.rejects(buildIndex(config, [makeEntry({ category: 'missing' })], resolve), /未声明/);
+  await assert.rejects(buildIndex(config, [makeEntry({ tags: ['missing'] })], resolve), /未声明/);
+});
+
+test('每个插件一至三个不重复标签，标准索引保留全部标签且开发者归属独立', async () => {
+  for (const tags of [[], ['research', 'research'], ['research', 'automation', 'productivity', 'media']]) {
+    assert.throws(() => makeEntry({ tags }), /至少|重复|最多/);
+  }
+  const tags = ['research', 'automation', 'productivity'];
+  const index = await buildIndex(config, [makeEntry({ tags, origin: 'official' })], async () => makePlugin());
+  const parsed = parseMarketIndex(index, validationUrl);
+  assert.deepEqual(parsed.plugins[0]!.metadata.labels, tags);
+  assert.equal(parsed.plugins[0]!.metadata.category, 'research');
+  assert.deepEqual(parsed.metadata.labels.automation?.title, { en: 'Automation', zh: '自动化' });
+  assert.equal(index.plugins[0]!.nex.origin, 'official');
 });
 
 test('GitHub 地址归一化，拒绝凭据、片段、目录穿越和旧的维护字段', () => {
@@ -51,7 +64,7 @@ test('GitHub 地址归一化，拒绝凭据、片段、目录穿越和旧的维�
   }
   assert.throws(() => makeEntry({ source: 'https://github.com/example/paper', path: '../secret' }), /相对路径/);
   assert.throws(() => makeEntry({ path: 'packages/paper' }), /GitHub/);
-  assert.throws(() => entrySchema.parse({ source: 'paper', category: 'research', versions: [] }), /Unrecognized/);
+  assert.throws(() => entrySchema.parse({ source: 'paper', tags: ['research'], versions: [] }), /Unrecognized/);
   assert.throws(() => parseYaml('source: a\nsource: b\n'), /unique/i);
 });
 

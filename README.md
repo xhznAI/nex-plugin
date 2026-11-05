@@ -1,6 +1,6 @@
 # Nex 精选插件
 
-本仓库是 Nex 官方维护的精选清单，由维护者从社区中人工挑选插件，也可收录 Nex 自研插件。插件由原作者在 GitHub 或 npm 发布；本仓库只登记来源、分类和推荐理由，基础资料自动从上游读取。
+本仓库是 Nex 官方维护的精选清单，由维护者从社区中人工挑选插件，也可收录 Nex 自研插件。插件由原作者在 GitHub 或 npm 发布；本仓库只登记来源、用途标签和推荐理由，基础资料自动从上游读取。
 
 只有 plugins 中明确登记且启用的来源会进入客户端目录。自动同步只刷新这些插件的资料和版本，不会扫描社区并自动新增收录。
 
@@ -10,7 +10,7 @@
 
 ~~~yaml
 source: "@author/dsh-example"
-category: research
+tags: [research]
 recommendation: "适合文献阅读和资料整理。"
 ~~~
 
@@ -18,25 +18,27 @@ GitHub 来源使用仓库地址：
 
 ~~~yaml
 source: https://github.com/author/dsh-example
-category: media
+tags: [media, creator]
 ~~~
 
-以上为示例地址。社区插件默认 origin: community，自研插件可添加 origin: official；该字段只区分“社区开发 / Nex 自研”，所有收录条目都属于 Nex 精选。单仓库多包可添加 path: packages/example。文件名自定，包名、作者、简介、图标和版本无需人工填写。
+以上为示例地址。每个插件选择 catalog.yaml 中一至三个不重复的标签，可跨场景标记，例如科研、自媒体、音视频、办公效率、自动化或界面增强。标签尽量保持同一层级，文献管理归入科研，不必凑满三个。标签由维护者决定；上游关键词只用于搜索，不自动变成分类标签。
+
+社区插件默认 origin: community，自研插件可添加 origin: official；该字段只区分“社区开发 / Nex 自研”，所有收录条目都属于 Nex 精选。单仓库多包可添加 path: packages/example。文件名自定，包名、作者、简介、图标和版本无需人工填写。
 
 也可以使用命令确认来源后生成清单：
 
 ~~~bash
 fnm use
 corepack pnpm install --frozen-lockfile
-corepack pnpm plugin:add @author/dsh-example --category research
-corepack pnpm plugin:add https://github.com/author/dsh-example --category media --origin official
+corepack pnpm plugin:add @author/dsh-example --tag research
+corepack pnpm plugin:add https://github.com/author/dsh-example --tag media --tag creator --origin official
 ~~~
 
 ## 信息从哪里来
 
 | 内容 | 来源 |
 | --- | --- |
-| 收录与否、分类、推荐理由、排序 | 本仓库的精选清单 |
+| 收录与否、用途标签、推荐理由、排序 | 本仓库的精选清单 |
 | 包名、作者、许可证、主页 | 原包的 package.json |
 | 名称、简介、图标 | 原包的 locale 元数据及 package.json；缺少图标时尝试原 GitHub 仓库所有者头像 |
 | npm 版本、发布时间和兼容范围 | npm registry 及对应版本 manifest |
@@ -58,6 +60,8 @@ corepack pnpm plugin:readme plugins/实际文件名.yaml --language zh
 check 检查类型、测试和精选清单，不需要外网。build 联网读取来源，生成根目录 index.json。生成文件可以提交到 Git 仓库，不需要手工修改。
 
 索引遵循 DSH format 1，并通过 DSH 官方校验器验证。npm 来源列出仍可用的公开 bundle 版本；GitHub 来源跟随默认分支，并在每次生成时固定到完整提交。安装参数使用索引内的精确版本或提交，实际兼容性由 DSH 安装器再次检查。条目的 nex 扩展保存推荐理由、来源归属及上游许可证信息。
+
+用途标签写入 DSH 标准 metadata.labels，首个标签同时作为 metadata.category，方便原生客户端和镜像读取。Nex 客户端支持按任意一个标签筛选，卡片最多显示三个用途标签；开发者归属独立保存，不占标签名额。
 
 任何启用来源读取失败时，构建失败并保留原 index.json，不会以空条目覆盖旧目录。新增版本由后续构建自动发现，无需逐版本填写或批准。
 
