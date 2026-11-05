@@ -1,6 +1,6 @@
 # 贡献精选插件
 
-通过「推荐插件」Issue 提供 npm 包名或公开 GitHub 仓库、用途和推荐理由，也可以直接提交 PR 添加 plugins 下的 YAML。
+Nex 维护者决定精选清单的收录范围，可以直接在 plugins 中添加来源。社区贡献者可通过「推荐插件」Issue 提供 npm 包名或公开 GitHub 仓库、用途和推荐理由，也可以提交 PR；投稿由维护者决定是否收录。
 
 ## 清单格式
 
@@ -9,7 +9,7 @@
 | source | 是 | npm 包名或公开 GitHub 仓库 URL |
 | category | 是 | catalog.yaml 中的分类 |
 | recommendation | 否 | 我们的推荐理由 |
-| origin | 否 | community（默认）或 official（Nex 自研） |
+| origin | 否 | 开发者归属：community（社区开发，默认）或 official（Nex 自研）；两者均由 Nex 精选 |
 | path | 否 | GitHub 仓库内的包目录 |
 | priority | 否 | 默认 100；数值越小越靠前 |
 | enabled | 否 | 默认 true；false 暂停展示 |

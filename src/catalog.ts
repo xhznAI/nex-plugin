@@ -65,8 +65,8 @@ export async function buildIndex(
     metadata: {
       categories: Object.fromEntries(Object.entries(config.categories).map(([id, title]) => [id, { title }])),
       labels: {
-        official: { title: { en: 'By Nex', zh: '官方开发' } },
-        community: { title: { en: 'Community Pick', zh: '社区推荐' } },
+        official: { title: { en: 'By Nex', zh: 'Nex 自研' } },
+        community: { title: { en: 'Community', zh: '社区开发' } },
       },
     },
     plugins,

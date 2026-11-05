@@ -19,7 +19,7 @@ const help = [
   'corepack pnpm build',
   '',
   'build 从 npm/GitHub 刷新资料，生成根目录 index.json。',
-  '新增来源会写入精选清单，合入前通过 PR 确认推荐。',
+  '新增来源会写入精选清单，收录范围由 Nex 维护者决定。',
 ].join('\n');
 
 async function main(): Promise<void> {

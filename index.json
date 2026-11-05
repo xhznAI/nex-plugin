@@ -45,13 +45,13 @@
       "official": {
         "title": {
           "en": "By Nex",
-          "zh": "官方开发"
+          "zh": "Nex 自研"
         }
       },
       "community": {
         "title": {
-          "en": "Community Pick",
-          "zh": "社区推荐"
+          "en": "Community",
+          "zh": "社区开发"
         }
       }
     }

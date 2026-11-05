@@ -1,6 +1,8 @@
 # Nex 精选插件
 
-Nex 维护推荐名单，插件由原作者在 GitHub 或 npm 发布。精选仓库只登记来源、分类和推荐理由；基础资料自动从上游读取。
+本仓库是 Nex 官方维护的精选清单，由维护者从社区中人工挑选插件，也可收录 Nex 自研插件。插件由原作者在 GitHub 或 npm 发布；本仓库只登记来源、分类和推荐理由，基础资料自动从上游读取。
+
+只有 plugins 中明确登记且启用的来源会进入客户端目录。自动同步只刷新这些插件的资料和版本，不会扫描社区并自动新增收录。
 
 ## 收录一个插件
 
@@ -19,7 +21,7 @@ source: https://github.com/author/dsh-example
 category: media
 ~~~
 
-以上为示例地址。自研插件可添加 origin: official；单仓库多包可添加 path: packages/example。文件名自定，包名、作者、简介、图标和版本无需人工填写。
+以上为示例地址。社区插件默认 origin: community，自研插件可添加 origin: official；该字段只区分“社区开发 / Nex 自研”，所有收录条目都属于 Nex 精选。单仓库多包可添加 path: packages/example。文件名自定，包名、作者、简介、图标和版本无需人工填写。
 
 也可以使用命令确认来源后生成清单：
 
