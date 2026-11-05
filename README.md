@@ -38,7 +38,7 @@ corepack pnpm plugin:add https://github.com/author/dsh-example --category media 
 | --- | --- |
 | 收录与否、分类、推荐理由、排序 | 本仓库的精选清单 |
 | 包名、作者、许可证、主页 | 原包的 package.json |
-| 名称、简介、图标 | 原包的 locale 元数据及 package.json |
+| 名称、简介、图标 | 原包的 locale 元数据及 package.json；缺少图标时尝试原 GitHub 仓库所有者头像 |
 | npm 版本、发布时间和兼容范围 | npm registry 及对应版本 manifest |
 | GitHub 版本和提交 | 仓库默认分支的 package.json 与实际提交 |
 | 详细介绍、使用方法及配图 | 原包的 meta.detail、README，或原仓库 README |
@@ -63,13 +63,13 @@ check 检查类型、测试和精选清单，不需要外网。build 联网读�
 
 ## 客户端读取
 
-公开仓库可直接通过 GitHub Raw 提供根目录 index.json，地址形式为：
+公开仓库通过 GitHub Raw 提供根目录 index.json：
 
 ~~~text
-https://raw.githubusercontent.com/<owner>/nex-plugin/main/index.json
+https://raw.githubusercontent.com/xhznAI/nex-plugin/main/index.json
 ~~~
 
-具体地址在远程仓库创建后确定。客户端读取索引，再通过 DSH 原生安装与详情接口访问原包或仓库。需要使用能直接返回 JSON 的地址，避免重定向。
+客户端读取索引，再通过 DSH 原生安装与详情接口访问原包或仓库。需要使用能直接返回 JSON 的地址，避免重定向。
 
 Check 流水线在推送和 PR 上执行检查与联网构建。Sync index 流水线在 main 的来源清单或工具变化、手动触发以及每日定时运行时，重新生成并提交 index.json；仅文件内容变化时提交。它使用 GitHub 内置令牌，不需要单独的对象存储服务。若 main 禁止机器人直接提交，可手动运行 build 后通过普通 PR 更新索引。
 

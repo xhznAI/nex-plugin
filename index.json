@@ -56,7 +56,573 @@
       }
     }
   },
-  "plugins": [],
+  "plugins": [
+    {
+      "name": "ds-bot",
+      "title": {
+        "en": "ds-bot"
+      },
+      "description": {
+        "en": "DS Bot: a team of long-lived Bots for DeepSeek Harness, with Main Bots, Bot-to-Bot messages and group chats"
+      },
+      "icon": "https://avatars.githubusercontent.com/u/279467036?v=4",
+      "homepage": "https://github.com/Fei2411/DS-Bot#readme",
+      "repository": {
+        "url": "https://github.com/Fei2411/DS-Bot",
+        "directory": "ds-bot"
+      },
+      "versions": [
+        {
+          "version": "0.2.7",
+          "publishTimestamp": 1793716792,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.2.6",
+          "publishTimestamp": 1793611848,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.2.5",
+          "publishTimestamp": 1793546427,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.2.4",
+          "publishTimestamp": 1793287847,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.2.3",
+          "publishTimestamp": 1793110250,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.2.2",
+          "publishTimestamp": 1792927209,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.2.1",
+          "publishTimestamp": 1792769222,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.2.0",
+          "publishTimestamp": 1792563300,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.1.7",
+          "publishTimestamp": 1792159619,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.1.6",
+          "publishTimestamp": 1791995530,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1791903223,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1791877999,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.1.3",
+          "publishTimestamp": 1791818834,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.1.2",
+          "publishTimestamp": 1791712324,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.1.1",
+          "publishTimestamp": 1791709521,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1791647394,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        }
+      ],
+      "metadata": {
+        "category": "productivity",
+        "labels": [
+          "community"
+        ],
+        "keywords": [
+          "dsh-plugin",
+          "deepseek-harness",
+          "dsh",
+          "deepseek",
+          "bot",
+          "multi-agent",
+          "agents"
+        ]
+      },
+      "nex": {
+        "source": "ds-bot",
+        "origin": "community",
+        "recommendation": "创建长期运行的专属助手，通过记忆、私信和群聊协作完成持续任务。",
+        "license": "Apache-2.0"
+      }
+    },
+    {
+      "name": "dsh-zotero",
+      "title": {
+        "en": "dsh-zotero",
+        "zh": "dsh-zotero"
+      },
+      "description": {
+        "en": "Zotero plugin for DeepSeek Harness: search and read papers in conversation, audit the literature trail, and browse the literature panel for citations and approved writes.",
+        "zh": "DeepSeek Harness 的本地 Zotero 插件：在对话中检索文献并核对文献轨迹，在文献面板里浏览全库、复制引用并受审批写入。"
+      },
+      "icon": "https://cdn.jsdelivr.net/npm/dsh-zotero@1.0.0-alpha.1/docs/images/icon.png",
+      "author": "Wenjie Xu",
+      "homepage": "https://github.com/Vncntvx/dsh-zotero#readme",
+      "repository": {
+        "url": "https://github.com/Vncntvx/dsh-zotero"
+      },
+      "versions": [
+        {
+          "version": "1.0.0-alpha.1",
+          "publishTimestamp": 1793760983,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.2-alpha.2"
+          }
+        },
+        {
+          "version": "0.14.1",
+          "publishTimestamp": 1793248291,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.3"
+          }
+        },
+        {
+          "version": "0.14.0",
+          "publishTimestamp": 1793171816,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.4"
+          }
+        },
+        {
+          "version": "0.13.1",
+          "publishTimestamp": 1792903961,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.3"
+          }
+        },
+        {
+          "version": "0.13.0",
+          "publishTimestamp": 1792471372,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2"
+          }
+        },
+        {
+          "version": "0.13.0-alpha.3",
+          "publishTimestamp": 1791707909,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-alpha.2"
+          }
+        },
+        {
+          "version": "0.13.0-alpha.2",
+          "publishTimestamp": 1791550428,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-alpha.2"
+          }
+        },
+        {
+          "version": "0.13.0-alpha.1",
+          "publishTimestamp": 1791356180,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-alpha.1"
+          }
+        },
+        {
+          "version": "0.12.1",
+          "publishTimestamp": 1790883369,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2"
+          }
+        },
+        {
+          "version": "0.12.0",
+          "publishTimestamp": 1790841813,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "0.2.0-rc.2"
+          }
+        },
+        {
+          "version": "0.11.0",
+          "publishTimestamp": 1790399522,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "0.1.7-rc.2"
+          }
+        },
+        {
+          "version": "0.10.1",
+          "publishTimestamp": 1790268178,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "0.1.7-rc.2"
+          }
+        },
+        {
+          "version": "0.10.0",
+          "publishTimestamp": 1790263462,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "0.1.7-rc.1"
+          }
+        },
+        {
+          "version": "0.9.1",
+          "publishTimestamp": 1790238289,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.7-alpha.2"
+          }
+        },
+        {
+          "version": "0.9.0",
+          "publishTimestamp": 1789815593,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.5-rc.1 || ^0.1.6-alpha.2"
+          }
+        },
+        {
+          "version": "0.8.4",
+          "publishTimestamp": 1789315700,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.5-rc.2"
+          }
+        },
+        {
+          "version": "0.8.3",
+          "publishTimestamp": 1789312640,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.5-rc.2"
+          }
+        },
+        {
+          "version": "0.8.2",
+          "publishTimestamp": 1789198032,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.5-rc.2"
+          }
+        },
+        {
+          "version": "0.8.1",
+          "publishTimestamp": 1789061098,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.5-rc.1"
+          }
+        },
+        {
+          "version": "0.8.0",
+          "publishTimestamp": 1788959419,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.5-alpha.1"
+          }
+        },
+        {
+          "version": "0.7.1",
+          "publishTimestamp": 1788677618,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.3-alpha.1"
+          }
+        },
+        {
+          "version": "0.7.0",
+          "publishTimestamp": 1788622711,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.3-alpha.1"
+          }
+        },
+        {
+          "version": "0.6.0",
+          "publishTimestamp": 1788417257,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.2-alpha.5"
+          }
+        },
+        {
+          "version": "0.5.2",
+          "publishTimestamp": 1788072392,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.2-alpha.1"
+          }
+        },
+        {
+          "version": "0.5.1",
+          "publishTimestamp": 1787408820,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.1-rc.2"
+          }
+        },
+        {
+          "version": "0.5.0",
+          "publishTimestamp": 1787362405,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.1-rc.2"
+          }
+        },
+        {
+          "version": "0.4.3",
+          "publishTimestamp": 1787312775,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.0-rc.8"
+          }
+        },
+        {
+          "version": "0.4.2",
+          "publishTimestamp": 1787312706,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.0-rc.8"
+          }
+        },
+        {
+          "version": "0.4.1",
+          "publishTimestamp": 1787070107,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.0-rc.7"
+          }
+        },
+        {
+          "version": "0.4.0",
+          "publishTimestamp": 1787068349,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.0-rc.7"
+          }
+        },
+        {
+          "version": "0.3.2",
+          "publishTimestamp": 1786985379,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.0-rc.7"
+          }
+        },
+        {
+          "version": "0.3.1",
+          "publishTimestamp": 1786977784,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.0-rc.7"
+          }
+        },
+        {
+          "version": "0.3.0",
+          "publishTimestamp": 1786972636,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.1.0-rc.5 <0.2.0-0 >=0.1.0-rc.6 <0.2.0-0"
+          }
+        },
+        {
+          "version": "0.2.1",
+          "publishTimestamp": 1786800964,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.1.0-rc.5 <0.2.0-0 >=0.1.0-rc.6 <0.2.0-0"
+          }
+        },
+        {
+          "version": "0.2.0",
+          "publishTimestamp": 1786798072,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.1.0-rc.5 <0.2.0-0 >=0.1.0-rc.6 <0.2.0-0"
+          }
+        },
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1786777219,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.0-rc.5"
+          }
+        }
+      ],
+      "metadata": {
+        "category": "research",
+        "labels": [
+          "community"
+        ],
+        "keywords": [
+          "zotero",
+          "dsh",
+          "deepseek-harness",
+          "plugin",
+          "research",
+          "literature"
+        ]
+      },
+      "nex": {
+        "source": "dsh-zotero",
+        "origin": "community",
+        "recommendation": "连接本机 Zotero 文献库，检索论文、阅读 PDF 与批注，并整理引用和研究笔记。",
+        "license": "MIT"
+      }
+    }
+  ],
   "nex": {
     "schemaVersion": 1
   }

@@ -46,6 +46,17 @@ test('名称、简介和图标读取上游 locale 与 manifest，不解析 READM
   assert.equal(source.plugin.versions[0]!.version, '1.2.0');
 });
 
+test('缺少插件图标时使用公开仓库头像，但不把仓库所有者冒充为作者', async () => {
+  const source = await resolveSource(makeEntry(), {
+    fetcher: async url => String(url).startsWith('https://registry.npmjs.org/')
+      ? reply(packument({ '1.2.0': { ...manifest, author: undefined } }))
+      : reply({ private: false, owner: { login: 'maintainer', avatar_url: 'https://avatars.githubusercontent.com/u/1?v=4' } }),
+    npmFiles: () => memoryFiles(),
+  });
+  assert.equal(source.plugin.icon, 'https://avatars.githubusercontent.com/u/1?v=4');
+  assert.equal(source.plugin.author, undefined);
+});
+
 test('GitHub 自动跟随 HEAD，同时在生成版本中固定完整提交和包子目录', async () => {
   const sha = 'a'.repeat(40);
   const requests: string[] = [];

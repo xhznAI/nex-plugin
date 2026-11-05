@@ -161,7 +161,7 @@ function exportedPath(manifest: ObjectValue, subpath: string): string | undefine
   } catch { return undefined; }
 }
 
-async function metadata(manifest: ObjectValue, files: DetailFiles, versions: MarketVersion[]): Promise<ResolvedPlugin> {
+async function metadata(manifest: ObjectValue, files: DetailFiles, versions: MarketVersion[], fetcher: Fetcher = fetch): Promise<ResolvedPlugin> {
   const titles: Record<string, string> = { en: String(manifest.name) };
   const descriptions: Record<string, string> = { ...(text(manifest.description) ? { en: text(manifest.description)! } : {}) };
   for (const language of ['en', 'zh']) {
@@ -191,6 +191,14 @@ async function metadata(manifest: ObjectValue, files: DetailFiles, versions: Mar
       icon = 'https://raw.githubusercontent.com/' + owner + '/' + name + '/' + source.commit + '/' +
         (source.path ? source.path + '/' : '') + path;
     }
+  }
+  if (!icon && repo?.url.startsWith('https://github.com/')) {
+    try {
+      const { owner, repo: name } = githubRepository(repo.url);
+      const info = object(await fetchJson('https://api.github.com/repos/' + owner + '/' + name, fetcher));
+      const avatar = new URL(String(object(info.owner).avatar_url));
+      if (info.private === false && avatar.origin === 'https://avatars.githubusercontent.com' && !avatar.username && !avatar.password) icon = avatar.href;
+    } catch { /* 头像缺失不影响收录，客户端仍可显示默认图标。 */ }
   }
   const keywords = Array.isArray(manifest.keywords)
     ? manifest.keywords.filter((value): value is string => typeof value === 'string') : [];
@@ -223,7 +231,7 @@ async function resolveNpm(entry: Entry, options: SourceOptions): Promise<Resolve
     npmFiles(entry.source, top.version, ['npmmirror', 'jsdelivr', 'unpkg'], {
       timeoutMs: 8_000, lifetime: new AbortController().signal,
     });
-  return { plugin: await metadata(object(manifests[top.version]), files, versions), files };
+  return { plugin: await metadata(object(manifests[top.version]), files, versions, options.fetcher), files };
 }
 
 async function githubHead(url: string, fetcher: Fetcher = fetch): Promise<{ sha: string; date: string }> {
@@ -246,7 +254,7 @@ export async function resolveSource(entry: Entry, options: SourceOptions = {}): 
   const version = versionOf(manifest, {
     type: 'git', url: entry.source, commit: sha, ...(entry.path ? { path: entry.path } : {}),
   }, date);
-  return { plugin: await metadata(manifest, files, [version]), files };
+  return { plugin: await metadata(manifest, files, [version], options.fetcher), files };
 }
 
 /** 详情复用 DSH 的文档顺序；README 内容不写入精选清单或索引。 */
