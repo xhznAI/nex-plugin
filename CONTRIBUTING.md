@@ -1,6 +1,28 @@
 # 贡献精选插件
 
-Nex 维护者决定精选清单的收录范围，可以直接在 plugins 中添加来源。社区贡献者可通过「推荐插件」Issue 提供 npm 包名或公开 GitHub 仓库、用途和推荐理由，也可以提交 PR；投稿由维护者决定是否收录。
+[← 回到首页](README.md) · [维护与接入](docs/maintenance.md)
+
+Nex 维护者决定精选清单的收录范围。官方自研插件和社区插件使用同一套收录流程；维护者可以直接更新清单，社区贡献者可提交 Issue 或 PR。
+
+## 推荐一个插件
+
+填写 [推荐插件表单](https://github.com/xhznAI/nex-plugin/issues/new?template=plugin-request.yml)，提供 npm 包名或公开 GitHub 仓库、用途、推荐理由和实际使用情况。维护者确认收录后加入目录。
+
+## 提交收录 PR
+
+1. Fork 仓库，在 `plugins/` 新增一份 YAML，填写来源、用途标签和推荐理由。
+2. 按下方字段说明填写清单，运行检查并生成索引。
+3. 提交 [Pull Request](https://github.com/xhznAI/nex-plugin/pulls)，说明适用场景、实际使用情况与已知限制。
+
+最小清单示例：
+
+```yaml
+source: "@author/dsh-example"
+tags: [research]
+recommendation: "适合文献阅读和资料整理。"
+```
+
+示例来源需替换为实际插件。GitHub 来源填写仓库 URL，例如 `https://github.com/author/dsh-example`。
 
 ## 清单格式
 
@@ -22,14 +44,16 @@ Nex 维护者决定精选清单的收录范围，可以直接在 plugins 中添�
 
 精选表示推荐，不自动表示逐版本兼容验证或安全认证。自动生成器只读取资料，不安装或运行插件。
 
-## 提交
+## 提交前检查
+
+本地环境与依赖准备见 [本地准备](docs/maintenance.md#本地准备)。
 
 ~~~bash
 corepack pnpm check
 corepack pnpm build
 ~~~
 
-检查结果及新增来源的 index.json 可以与清单一起提交。合入 main 后，流水线也会重新生成索引。构建过程需要访问 npm registry、包文件 CDN 和 GitHub API；本地的 GitHub API 配额不足时可提供 GITHUB_TOKEN，它只发往 api.github.com。
+将生成的 `index.json` 与来源清单一起提交，在 PR 中注明检查结果。合入 `main` 后，流水线也会重新生成索引。构建需要联网，详见 [检查与生成索引](docs/maintenance.md#检查与生成索引)。
 
 ## 更新与移除
 
@@ -39,4 +63,4 @@ corepack pnpm build
 
 ## 自动同步
 
-仓库内 index.json 是生成产物，维护者不手工编辑其中的插件资料。同步失败不会覆盖当前索引；修复网络或来源后重试 Sync index。
+仓库内 `index.json` 是生成产物，维护者不手工编辑其中的插件资料。同步方式与失败处理见 [自动同步](docs/maintenance.md#自动同步)。
