@@ -1,6 +1,6 @@
 # Nex 精选插件
 
-本仓库是 Nex 官方维护的精选清单，由维护者从社区中人工挑选插件，也可收录 Nex 自研插件。插件由原作者在 GitHub 或 npm 发布；本仓库只登记来源、用途标签和推荐理由，基础资料自动从上游读取。
+Nex 官方维护的精选插件目录，收录社区插件和 Nex 自研插件。插件由原作者在 GitHub 或 npm 发布；本仓库维护收录来源、用途标签、推荐理由和排序，基础资料自动从上游读取。
 
 只有 plugins 中明确登记且启用的来源会进入客户端目录。自动同步只刷新这些插件的资料和版本，不会扫描社区并自动新增收录。
 
@@ -21,7 +21,7 @@ source: https://github.com/author/dsh-example
 tags: [media, creator]
 ~~~
 
-以上为示例地址。每个插件选择 catalog.yaml 中一至三个不重复的标签，可跨场景标记，例如科研、自媒体、音视频、办公效率、自动化或界面增强。标签尽量保持同一层级，文献管理归入科研，不必凑满三个。标签由维护者决定；上游关键词只用于搜索，不自动变成分类标签。
+以上为格式示例。每个插件从 [catalog.yaml](catalog.yaml) 中选择一至三个不重复的用途标签。完整字段与标签维护方式见 [贡献说明](CONTRIBUTING.md)。
 
 社区插件默认 origin: community，自研插件可添加 origin: official；该字段只区分“社区开发 / Nex 自研”，所有收录条目都属于 Nex 精选。单仓库多包可添加 path: packages/example。文件名自定，包名、作者、简介、图标和版本无需人工填写。
 
@@ -46,7 +46,7 @@ corepack pnpm plugin:add https://github.com/author/dsh-example --tag media --tag
 | 详细介绍、使用方法及配图 | 原包的 meta.detail、README，或原仓库 README |
 | 实际安装内容 | npm 或原 GitHub 仓库 |
 
-详情读取复用 DSH 的公开 plugin-detail 库：优先语言文件指定的 meta.detail，其次包 README，最后尝试原仓库 README。README 不保存到收录清单，也不从其自由文本推断安装版本。
+详情读取遵循 DSH plugin-detail 规则：优先语言文件指定的 meta.detail，其次包 README，最后尝试原仓库 README。安装版本由 npm 或 GitHub 元数据解析。
 
 ## 检查与生成
 
@@ -61,9 +61,9 @@ check 检查类型、测试和精选清单，不需要外网。build 联网读�
 
 索引遵循 DSH format 1，并通过 DSH 官方校验器验证。npm 来源列出仍可用的公开 bundle 版本；GitHub 来源跟随默认分支，并在每次生成时固定到完整提交。安装参数使用索引内的精确版本或提交，实际兼容性由 DSH 安装器再次检查。条目的 nex 扩展保存推荐理由、来源归属及上游许可证信息。
 
-用途标签写入 DSH 标准 metadata.labels，首个标签同时作为 metadata.category，方便原生客户端和镜像读取。Nex 客户端支持按任意一个标签筛选，卡片最多显示三个用途标签；开发者归属独立保存，不占标签名额。
+用途标签写入 DSH 标准 metadata.labels，首个标签同时作为 metadata.category，供客户端和镜像读取。Nex 客户端支持按标签筛选，卡片最多显示三个用途标签。
 
-任何启用来源读取失败时，构建失败并保留原 index.json，不会以空条目覆盖旧目录。新增版本由后续构建自动发现，无需逐版本填写或批准。
+任何启用来源读取失败时，构建失败并保留原 index.json。上游新版本在构建时自动同步。
 
 ## 客户端读取
 
@@ -75,7 +75,7 @@ https://raw.githubusercontent.com/xhznAI/nex-plugin/main/index.json
 
 客户端读取索引，再通过 DSH 原生安装与详情接口访问原包或仓库。需要使用能直接返回 JSON 的地址，避免重定向。
 
-Check 流水线在推送和 PR 上执行检查与联网构建。Sync index 流水线在 main 的来源清单或工具变化、手动触发以及每日定时运行时，重新生成并提交 index.json；仅文件内容变化时提交。它使用 GitHub 内置令牌，不需要单独的对象存储服务。若 main 禁止机器人直接提交，可手动运行 build 后通过普通 PR 更新索引。
+Check 流水线在推送和 PR 上执行检查与联网构建。Sync index 流水线在 main 的来源清单或工具变化、手动触发以及每日定时运行时，重新生成并提交 index.json；仅文件内容变化时提交。自动同步使用 GitHub Actions 内置令牌。若 main 禁止机器人直接提交，可手动运行 build 后通过 PR 更新索引。
 
 ## 下架与贡献
 
@@ -83,10 +83,8 @@ Check 流水线在推送和 PR 上执行检查与联网构建。Sync index 流�
 
 投稿方式与字段见 [贡献说明](CONTRIBUTING.md)。examples 仅提供格式示例，不参与索引。
 
-## 参考模式
+## 协议参考
 
-- [DSH 社区精选仓库](https://github.com/DshMarketPlace/awesome-dsh-plugin)：维护推荐来源，由脚本同步资料。
-- [dshworks 插件目录](https://github.com/dshworks/awesome-dsh-plugins)：从 npm 获取发布信息，生成 DSH 标准索引。
 - [DSH 插件索引说明](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/user/guide/plugin-market.md)：标准索引、来源和客户端行为。
 
 工具代码采用 MIT。收录不改变原插件的作者、归属或许可证。
