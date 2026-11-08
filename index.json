@@ -176,6 +176,16 @@
       },
       "versions": [
         {
+          "version": "2.8.2",
+          "publishTimestamp": 1794069062,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.2-rc.1 || ^0.1.7-rc.2 || ^0.2.0-rc.1"
+          }
+        },
+        {
           "version": "2.8.0",
           "publishTimestamp": 1793507924,
           "source": {
@@ -374,6 +384,14 @@
       },
       "versions": [
         {
+          "version": "0.3.1",
+          "publishTimestamp": 1794015665,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
           "version": "0.3.0",
           "publishTimestamp": 1793978737,
           "source": {
@@ -547,6 +565,36 @@
         "url": "https://github.com/DDDMUC/dsh-free-search"
       },
       "versions": [
+        {
+          "version": "0.9.37",
+          "publishTimestamp": 1794085484,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.7-rc.1 || ^0.2.0-rc.1"
+          }
+        },
+        {
+          "version": "0.9.36",
+          "publishTimestamp": 1794082609,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.7-rc.1 || ^0.2.0-rc.1"
+          }
+        },
+        {
+          "version": "0.9.35",
+          "publishTimestamp": 1794061446,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.7-rc.1 || ^0.2.0-rc.1"
+          }
+        },
         {
           "version": "0.9.34",
           "publishTimestamp": 1793992569,
@@ -1503,13 +1551,23 @@
         "en": "Zotero plugin for DeepSeek Harness: search and read papers in conversation, audit the literature trail, and browse the literature panel for citations and approved writes.",
         "zh": "DeepSeek Harness 的本地 Zotero 插件：在对话中检索文献并核对文献轨迹，在文献面板里浏览全库、复制引用并受审批写入。"
       },
-      "icon": "https://cdn.jsdelivr.net/npm/dsh-zotero@1.0.0/docs/images/icon.png",
+      "icon": "https://cdn.jsdelivr.net/npm/dsh-zotero@1.0.1/docs/images/icon.png",
       "author": "Wenjie Xu",
       "homepage": "https://github.com/Vncntvx/dsh-zotero#readme",
       "repository": {
         "url": "https://github.com/Vncntvx/dsh-zotero"
       },
       "versions": [
+        {
+          "version": "1.0.1",
+          "publishTimestamp": 1794052557,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.2-rc.1"
+          }
+        },
         {
           "version": "1.0.0",
           "publishTimestamp": 1793979441,
