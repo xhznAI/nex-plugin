@@ -176,6 +176,16 @@
       },
       "versions": [
         {
+          "version": "2.8.3",
+          "publishTimestamp": 1794119066,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.2-rc.1 || ^0.1.7-rc.2 || ^0.2.0-rc.1"
+          }
+        },
+        {
           "version": "2.8.2",
           "publishTimestamp": 1794069062,
           "source": {
@@ -565,6 +575,26 @@
         "url": "https://github.com/DDDMUC/dsh-free-search"
       },
       "versions": [
+        {
+          "version": "0.9.39",
+          "publishTimestamp": 1794144422,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.7-rc.1 || ^0.2.0-rc.1"
+          }
+        },
+        {
+          "version": "0.9.38",
+          "publishTimestamp": 1794129838,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.7-rc.1 || ^0.2.0-rc.1"
+          }
+        },
         {
           "version": "0.9.37",
           "publishTimestamp": 1794085484,
