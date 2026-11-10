@@ -575,7 +575,7 @@
         "en": "dsh-free-search"
       },
       "description": {
-        "en": "Free web search for DeepSeek Harness: 27 engines (Bing/DuckDuckGo/AnySearch/SearXNG/Exa/Tavily/Keenable/Firecrawl/Parallel/You.com keyless; Zhihu global/site via MCP and Perplexity/SerpBase/DeepSeek (official + native tools/search)/Baidu/Kimi/Aliyun/Douba"
+        "en": "Free web search for DeepSeek Harness: 37 engines (Bing/DuckDuckGo/AnySearch/SearXNG/Exa/Tavily/Keenable/Firecrawl/Parallel/You.com keyless; Zhihu global/site via MCP and Perplexity/SerpBase/DeepSeek (official + native tools/search)/Baidu/Kimi/Aliyun/Douba"
       },
       "icon": "https://avatars.githubusercontent.com/u/175344510?v=4",
       "homepage": "https://github.com/DDDMUC/dsh-free-search#readme",
@@ -583,6 +583,16 @@
         "url": "https://github.com/DDDMUC/dsh-free-search"
       },
       "versions": [
+        {
+          "version": "0.9.42",
+          "publishTimestamp": 1794315292,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.7-rc.1 || ^0.2.0-rc.1"
+          }
+        },
         {
           "version": "0.9.41",
           "publishTimestamp": 1794235691,
@@ -1536,6 +1546,91 @@
         "source": "dsh-free-search",
         "origin": "community",
         "recommendation": "为助手补充多引擎联网搜索，支持免 Key 的搜索来源与自动回退，方便资料检索和信息核对。",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "dsh-media-desk",
+      "title": {
+        "en": "dsh-media-desk"
+      },
+      "description": {
+        "en": "DeepSeek Harness 插件。一句话记灵感，一键成稿：口播脚本、标题、视频封面、配图和黑白线稿分镜。"
+      },
+      "icon": "https://avatars.githubusercontent.com/u/153842595?v=4",
+      "homepage": "https://github.com/woniuniuniu/dsh-media-desk#readme",
+      "repository": {
+        "url": "https://github.com/woniuniuniu/dsh-media-desk"
+      },
+      "versions": [
+        {
+          "version": "2.6.2",
+          "publishTimestamp": 1794111213,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.5 <0.3.0"
+          }
+        },
+        {
+          "version": "2.6.1",
+          "publishTimestamp": 1793875365,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.5 <0.3.0"
+          }
+        },
+        {
+          "version": "2.6.0",
+          "publishTimestamp": 1793857763,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.5 <0.3.0"
+          }
+        },
+        {
+          "version": "2.5.4",
+          "publishTimestamp": 1793815285,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.5 <0.3.0"
+          }
+        },
+        {
+          "version": "2.5.3",
+          "publishTimestamp": 1793797268,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.5 <0.3.0"
+          }
+        }
+      ],
+      "metadata": {
+        "category": "creator",
+        "labels": [
+          "creator",
+          "writing",
+          "media"
+        ],
+        "keywords": [
+          "dsh",
+          "deepseek-harness",
+          "dsh-plugin"
+        ]
+      },
+      "nex": {
+        "source": "dsh-media-desk",
+        "origin": "community",
+        "recommendation": "自媒体工作台：从灵感生成脚本、封面、配图和分镜，结合排期、复盘与个人风格，集中管理创作素材。",
         "license": "MIT"
       }
     },
