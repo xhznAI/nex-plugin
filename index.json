@@ -2052,6 +2052,57 @@
         "recommendation": "连接本机 Zotero 文献库，检索论文、阅读 PDF 与批注，并整理引用和研究笔记。",
         "license": "MIT"
       }
+    },
+    {
+      "name": "dsh-folio",
+      "title": {
+        "en": "Folio · LaTeX",
+        "zh": "Folio · LaTeX 写作"
+      },
+      "description": {
+        "en": "A quiet LaTeX workspace: source editor, PDF builds, and reviewed AI edits through your Harness chat and models.",
+        "zh": "安静的 LaTeX 写作工作区：源码编辑、PDF 编译，通过 Harness 原生对话与模型提供可审阅的 AI 修改。"
+      },
+      "icon": "https://raw.githubusercontent.com/Meinianda-L/folio/252c6f18a0b99c4c76a2ee740991ee8af77051a6/icon.svg",
+      "homepage": "https://github.com/Meinianda-L/folio#readme",
+      "repository": {
+        "url": "https://github.com/Meinianda-L/folio"
+      },
+      "versions": [
+        {
+          "version": "0.2.0",
+          "publishTimestamp": 1793527544,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Meinianda-L/folio",
+            "commit": "252c6f18a0b99c4c76a2ee740991ee8af77051a6"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.3.0"
+          }
+        }
+      ],
+      "metadata": {
+        "category": "research",
+        "labels": [
+          "research",
+          "writing"
+        ],
+        "keywords": [
+          "deepseek-harness",
+          "dsh-plugin",
+          "latex",
+          "editor",
+          "pdf",
+          "ai-writing"
+        ]
+      },
+      "nex": {
+        "source": "https://github.com/Meinianda-L/folio",
+        "origin": "community",
+        "recommendation": "在本地编辑 LaTeX、编译预览 PDF，通过 AI 修改建议和差异审阅完成论文写作。需安装本地 TeX 编译环境。",
+        "license": "MIT"
+      }
     }
   ],
   "nex": {

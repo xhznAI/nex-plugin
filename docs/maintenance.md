@@ -58,6 +58,8 @@ corepack pnpm plugin:add https://github.com/author/dsh-example --tag media --tag
 
 基础资料与版本由上游提供。用途标签由维护者指定，上游关键词用于搜索。GitHub 仓库所有者头像只作图标回退，作者信息仍来自原包声明。
 
+GitHub 来源的公开性以仓库为准；`package.json` 的 `private: true` 只禁止发布到 npm，不影响收录公开仓库中的插件。
+
 详情读取遵循 DSH `plugin-detail` 规则：优先语言文件指定的 `meta.detail`，其次包 README，最后尝试原仓库 README。
 
 ## 检查与生成索引

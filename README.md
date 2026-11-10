@@ -36,6 +36,7 @@ Nex 精选收录适合研究、学习、创作与日常工作的插件，由官�
 | 插件 | 适合用来做什么 | 标签 |
 | --- | --- | --- |
 | [Zotero](https://github.com/Vncntvx/dsh-zotero) | 检索本机文献库，阅读论文与批注，整理引用和研究笔记 | 科研 |
+| [Folio](https://github.com/Meinianda-L/folio) | 编辑 LaTeX 论文、编译预览 PDF，审阅并应用 AI 修改建议；需安装 TeX 环境 | 科研、写作 |
 | [StudyMate](https://github.com/Miaotofu01/Study-Mate) | 规划数学与计算机学习路线，配合讲解、练习与项目实操 | 学习 |
 | [自媒体工作台](https://github.com/woniuniuniu/dsh-media-desk) | 从灵感生成脚本、封面、配图和分镜，管理排期、复盘与个人风格 | 自媒体、写作、音视频 |
 | [DS Bot](https://github.com/Fei2411/DS-Bot) | 创建长期运行的助手，通过记忆、私信和群聊协作完成任务 | 办公效率、自动化 |

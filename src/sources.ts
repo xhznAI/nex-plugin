@@ -97,7 +97,7 @@ export function githubFiles(repository: string, commit: string, path = '', fetch
 function isBundle(manifest: ObjectValue): boolean {
   const patch = object(object(manifest.dsh).bundle).patch;
   const patches = Array.isArray(patch) ? patch : [patch];
-  return manifest.private !== true && !manifest.deprecated && patches.length > 0 &&
+  return !manifest.deprecated && patches.length > 0 &&
     patches.every(value => { try { return typeof value === 'string' && !!filePath(value); } catch { return false; } });
 }
 
@@ -126,7 +126,10 @@ export function dshRange(manifest: ObjectValue): string | undefined {
 }
 
 function versionOf(manifest: ObjectValue, source: MarketVersion['source'], published: unknown): MarketVersion {
-  if (!isBundle(manifest)) throw new Error('来源不是可安装的公开 DSH bundle');
+  // GitHub 仓库的公开性由 API 校验；manifest 的 private 只限制 npm 发布。
+  if ((source.type === 'npm' && manifest.private === true) || !isBundle(manifest)) {
+    throw new Error('来源不是可安装的公开 DSH bundle');
+  }
   const range = dshRange(manifest);
   const parsed = parseMarketIndex({
     format: 1, title: 'Source', plugins: [{

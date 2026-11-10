@@ -74,6 +74,25 @@ test('GitHub 自动跟随 HEAD，同时在生成版本中固定完整提交和�
   assert.ok(requests.some(url => url.includes('/contents/packages/paper/package.json?ref=' + sha)));
 });
 
+test('公开 GitHub 插件允许禁止 npm 发布，但仍拒绝弃用或缺失 bundle 的包', async () => {
+  const sha = 'd'.repeat(40);
+  const entry = makeEntry({ source: 'https://github.com/example/paper' });
+  const resolve = (overrides: Record<string, unknown> = {}) => resolveSource(entry, {
+    fetcher: async url => {
+      if (String(url).endsWith('/repos/example/paper')) return reply({ private: false });
+      if (String(url).includes('/commits/HEAD')) return reply({ sha, commit: { committer: { date: '2026-11-10T00:00:00Z' } } });
+      if (String(url).includes('/package.json?')) return file(JSON.stringify({ ...manifest, private: true, ...overrides }));
+      return new Response('', { status: 404 });
+    },
+  });
+  const source = await resolve();
+  assert.equal(source.plugin.name, manifest.name);
+  assert.deepEqual(source.plugin.versions[0]!.source, { type: 'git', url: entry.source, commit: sha });
+  assert.equal(source.plugin.versions[0]!.engines?.dsh, manifest.engines.dsh);
+  await assert.rejects(resolve({ deprecated: '已弃用' }), /不是可安装/);
+  await assert.rejects(resolve({ dsh: {} }), /不是可安装/);
+});
+
 test('详情优先采用上游中文 meta.detail，并去除 front matter', async () => {
   const source = { plugin: makePlugin(), files: memoryFiles({
     'locale/zh.json': JSON.stringify({ meta: { detail: 'docs/使用说明.md' } }),
