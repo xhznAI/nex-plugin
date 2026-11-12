@@ -394,6 +394,14 @@
       },
       "versions": [
         {
+          "version": "0.3.5",
+          "publishTimestamp": 1794411004,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
           "version": "0.3.2",
           "publishTimestamp": 1794218174,
           "source": {
@@ -575,7 +583,7 @@
         "en": "dsh-free-search"
       },
       "description": {
-        "en": "Free web search for DeepSeek Harness: 37 engines (Bing/DuckDuckGo/AnySearch/SearXNG/Exa/Tavily/Keenable/Firecrawl/Parallel/You.com keyless; Zhihu global/site via MCP and Perplexity/SerpBase/DeepSeek (official + native tools/search)/Baidu/Kimi/Aliyun/Douba"
+        "en": "Free web search for DeepSeek Harness: 38 engines (Bing/DuckDuckGo/AnySearch/SearXNG/Exa/Tavily/Keenable/Firecrawl/Parallel/You.com keyless; Zhihu global/site via MCP and Perplexity/SerpBase/DeepSeek (official + native tools/search)/Baidu/Kimi/Aliyun/Douba"
       },
       "icon": "https://avatars.githubusercontent.com/u/175344510?v=4",
       "homepage": "https://github.com/DDDMUC/dsh-free-search#readme",
@@ -583,6 +591,16 @@
         "url": "https://github.com/DDDMUC/dsh-free-search"
       },
       "versions": [
+        {
+          "version": "0.9.43",
+          "publishTimestamp": 1794402280,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.7-rc.1 || ^0.2.0-rc.1"
+          }
+        },
         {
           "version": "0.9.42",
           "publishTimestamp": 1794315292,
@@ -1563,6 +1581,16 @@
         "url": "https://github.com/woniuniuniu/dsh-media-desk"
       },
       "versions": [
+        {
+          "version": "2.7.0",
+          "publishTimestamp": 1794425168,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.5 <0.3.0"
+          }
+        },
         {
           "version": "2.6.2",
           "publishTimestamp": 1794111213,
