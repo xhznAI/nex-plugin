@@ -909,6 +909,16 @@
       },
       "versions": [
         {
+          "version": "0.9.48",
+          "publishTimestamp": 1794577193,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.7-rc.1 || ^0.2.0-rc.1"
+          }
+        },
+        {
           "version": "0.9.46",
           "publishTimestamp": 1794500940,
           "source": {
@@ -2545,7 +2555,7 @@
         "en": "A quiet LaTeX workspace: source editor, PDF builds, and reviewed AI edits through your Harness chat and models.",
         "zh": "安静的 LaTeX 写作工作区：源码编辑、PDF 编译，通过 Harness 原生对话与模型提供可审阅的 AI 修改。"
       },
-      "icon": "https://raw.githubusercontent.com/Meinianda-L/folio/252c6f18a0b99c4c76a2ee740991ee8af77051a6/icon.svg",
+      "icon": "https://raw.githubusercontent.com/Meinianda-L/folio/af190e338b7fa763a811d034dd20361440284c24/icon.svg",
       "homepage": "https://github.com/Meinianda-L/folio#readme",
       "repository": {
         "url": "https://github.com/Meinianda-L/folio"
@@ -2553,11 +2563,11 @@
       "versions": [
         {
           "version": "0.2.0",
-          "publishTimestamp": 1793527544,
+          "publishTimestamp": 1794578262,
           "source": {
             "type": "git",
             "url": "https://github.com/Meinianda-L/folio",
-            "commit": "252c6f18a0b99c4c76a2ee740991ee8af77051a6"
+            "commit": "af190e338b7fa763a811d034dd20361440284c24"
           },
           "engines": {
             "dsh": ">=0.2.1-rc.2 <0.3.0"
