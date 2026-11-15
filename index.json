@@ -176,6 +176,26 @@
       },
       "versions": [
         {
+          "version": "2.8.5",
+          "publishTimestamp": 1794714528,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.2-rc.1 || ^0.1.7-rc.2 || ^0.2.0-rc.1"
+          }
+        },
+        {
+          "version": "2.8.4",
+          "publishTimestamp": 1794685147,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.2-rc.1 || ^0.1.7-rc.2 || ^0.2.0-rc.1"
+          }
+        },
+        {
           "version": "2.8.3",
           "publishTimestamp": 1794119066,
           "source": {
@@ -908,6 +928,26 @@
         "url": "https://github.com/DDDMUC/dsh-free-search"
       },
       "versions": [
+        {
+          "version": "0.9.50",
+          "publishTimestamp": 1794665812,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.7-rc.1 || ^0.2.0-rc.1"
+          }
+        },
+        {
+          "version": "0.9.49",
+          "publishTimestamp": 1794643761,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.7-rc.1 || ^0.2.0-rc.1"
+          }
+        },
         {
           "version": "0.9.48",
           "publishTimestamp": 1794577193,
@@ -2136,13 +2176,23 @@
         "en": "Zotero plugin for DeepSeek Harness: search and read papers in conversation, audit the literature trail, and browse the literature panel for citations and approved writes.",
         "zh": "DeepSeek Harness 的本地 Zotero 插件：在对话中检索文献并核对文献轨迹，在文献面板里浏览全库、复制引用并受审批写入。"
       },
-      "icon": "https://cdn.jsdelivr.net/npm/dsh-zotero@1.0.1/docs/images/icon.png",
+      "icon": "https://cdn.jsdelivr.net/npm/dsh-zotero@1.1.0/docs/images/icon.png",
       "author": "Wenjie Xu",
       "homepage": "https://github.com/Vncntvx/dsh-zotero#readme",
       "repository": {
         "url": "https://github.com/Vncntvx/dsh-zotero"
       },
       "versions": [
+        {
+          "version": "1.1.0",
+          "publishTimestamp": 1794673333,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.2-rc.2 <0.3.0"
+          }
+        },
         {
           "version": "1.0.1",
           "publishTimestamp": 1794052557,
