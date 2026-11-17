@@ -723,6 +723,14 @@
       },
       "versions": [
         {
+          "version": "0.3.8",
+          "publishTimestamp": 1794844046,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
           "version": "0.3.6",
           "publishTimestamp": 1794503866,
           "source": {
@@ -920,7 +928,7 @@
         "en": "dsh-free-search"
       },
       "description": {
-        "en": "Free web search for DeepSeek Harness: 40 engines (Bing/DuckDuckGo/AnySearch/SearXNG/Exa/Tavily/Keenable/Firecrawl/Parallel/Brave/You.com keyless; Zhihu global/site via MCP and Perplexity/SerpBase/DeepSeek (official + native tools/search)/Baidu/Kimi/Aliyun"
+        "en": "Free web search for DeepSeek Harness: 42 engines (Bing/DuckDuckGo/AnySearch/SearXNG/Exa/Tavily/Keenable/Firecrawl/Parallel/Brave/Zhipu/You.com keyless; Zhihu global/site via MCP and Perplexity/SerpBase/DeepSeek (official + native tools/search)/Baidu/Kimi/"
       },
       "icon": "https://avatars.githubusercontent.com/u/175344510?v=4",
       "homepage": "https://github.com/DDDMUC/dsh-free-search#readme",
@@ -928,6 +936,26 @@
         "url": "https://github.com/DDDMUC/dsh-free-search"
       },
       "versions": [
+        {
+          "version": "0.9.56",
+          "publishTimestamp": 1794899175,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
+          "version": "0.9.54",
+          "publishTimestamp": 1794843183,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
         {
           "version": "0.9.53",
           "publishTimestamp": 1794760835,
@@ -1972,9 +2000,11 @@
           "serpbase",
           "serply",
           "outcrawl",
+          "specstream",
           "search",
           "free",
           "brave",
+          "zhipu",
           "baidu",
           "kimi",
           "moonshot",
@@ -2217,7 +2247,7 @@
         "en": "Zotero plugin for DeepSeek Harness: search and read papers in conversation, audit the literature trail, and browse the literature panel for citations and approved writes.",
         "zh": "DeepSeek Harness 的本地 Zotero 插件：在对话中检索文献并核对文献轨迹，在文献面板里浏览全库、复制引用并受审批写入。"
       },
-      "icon": "https://cdn.jsdelivr.net/npm/dsh-zotero@1.1.0/docs/images/icon.png",
+      "icon": "https://cdn.jsdelivr.net/npm/dsh-zotero@1.2.0/docs/images/icon.png",
       "author": "Wenjie Xu",
       "homepage": "https://github.com/Vncntvx/dsh-zotero#readme",
       "repository": {
@@ -2225,13 +2255,13 @@
       },
       "versions": [
         {
-          "version": "1.1.0",
-          "publishTimestamp": 1794673333,
+          "version": "1.2.0",
+          "publishTimestamp": 1794843881,
           "source": {
             "type": "npm"
           },
           "engines": {
-            "dsh": ">=0.2.2-rc.2 <0.3.0"
+            "dsh": ">=0.2.2-rc.3 <0.3.0"
           }
         },
         {
