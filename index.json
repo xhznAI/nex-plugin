@@ -937,6 +937,46 @@
       },
       "versions": [
         {
+          "version": "0.9.60",
+          "publishTimestamp": 1794933689,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
+          "version": "0.9.59",
+          "publishTimestamp": 1794928994,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
+          "version": "0.9.58",
+          "publishTimestamp": 1794926950,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
+          "version": "0.9.57",
+          "publishTimestamp": 1794911944,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
           "version": "0.9.56",
           "publishTimestamp": 1794899175,
           "source": {
@@ -2240,20 +2280,28 @@
     {
       "name": "dsh-zotero",
       "title": {
-        "en": "dsh-zotero",
-        "zh": "dsh-zotero"
+        "en": "dsh-zotero"
       },
       "description": {
-        "en": "Zotero plugin for DeepSeek Harness: search and read papers in conversation, audit the literature trail, and browse the literature panel for citations and approved writes.",
-        "zh": "DeepSeek Harness 的本地 Zotero 插件：在对话中检索文献并核对文献轨迹，在文献面板里浏览全库、复制引用并受审批写入。"
+        "en": "Zotero plugin for DeepSeek Harness: search and read papers in conversation, audit the literature trail, and browse the literature panel for citations and approved writes."
       },
-      "icon": "https://cdn.jsdelivr.net/npm/dsh-zotero@1.2.0/docs/images/icon.png",
+      "icon": "https://cdn.jsdelivr.net/npm/dsh-zotero@1.3.0-alpha.1/docs/images/icon.png",
       "author": "Wenjie Xu",
       "homepage": "https://github.com/Vncntvx/dsh-zotero#readme",
       "repository": {
         "url": "https://github.com/Vncntvx/dsh-zotero"
       },
       "versions": [
+        {
+          "version": "1.3.0-alpha.1",
+          "publishTimestamp": 1794915843,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.2-rc.3 <0.3.0"
+          }
+        },
         {
           "version": "1.2.0",
           "publishTimestamp": 1794843881,
@@ -2676,19 +2724,19 @@
         "en": "A quiet LaTeX workspace: source editor, PDF builds, and reviewed AI edits through your Harness chat and models.",
         "zh": "安静的 LaTeX 写作工作区：源码编辑、PDF 编译，通过 Harness 原生对话与模型提供可审阅的 AI 修改。"
       },
-      "icon": "https://raw.githubusercontent.com/Meinianda-L/folio/af190e338b7fa763a811d034dd20361440284c24/icon.svg",
+      "icon": "https://raw.githubusercontent.com/Meinianda-L/folio/94f51327bf22dad08be3e90aec1dce6f659e531b/icon.svg",
       "homepage": "https://github.com/Meinianda-L/folio#readme",
       "repository": {
         "url": "https://github.com/Meinianda-L/folio"
       },
       "versions": [
         {
-          "version": "0.2.0",
-          "publishTimestamp": 1794578262,
+          "version": "0.3.0",
+          "publishTimestamp": 1794919521,
           "source": {
             "type": "git",
             "url": "https://github.com/Meinianda-L/folio",
-            "commit": "af190e338b7fa763a811d034dd20361440284c24"
+            "commit": "94f51327bf22dad08be3e90aec1dce6f659e531b"
           },
           "engines": {
             "dsh": ">=0.2.1-rc.2 <0.3.0"
