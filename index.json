@@ -408,12 +408,20 @@
         "en": "Describe a small game, play it in the right sidebar, and swap its art for your own generated assets.",
         "zh": "说一句话做出能玩的小游戏，在右栏试玩，再换上你自己生成的美术。"
       },
-      "icon": "https://cdn.jsdelivr.net/npm/@zseven-w/dsh-game-studio@0.1.0-rc.5/icon.svg",
+      "icon": "https://cdn.jsdelivr.net/npm/@zseven-w/dsh-game-studio@0.1.0-rc.6/icon.svg",
       "homepage": "https://github.com/ZSeven-W/dsh-game-studio#readme",
       "repository": {
         "url": "https://github.com/ZSeven-W/dsh-game-studio"
       },
       "versions": [
+        {
+          "version": "0.1.0-rc.6",
+          "publishTimestamp": 1795025443,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
         {
           "version": "0.1.0-rc.5",
           "publishTimestamp": 1794164938,
@@ -465,8 +473,16 @@
           "dsh",
           "dsh-plugin",
           "deepseek-harness",
+          "codex",
+          "claude-code",
+          "mcp",
           "game",
-          "gamedev"
+          "gamedev",
+          "ai-game-generator",
+          "html5-games",
+          "wechat-minigame",
+          "threejs",
+          "github-pages"
         ]
       },
       "nex": {
@@ -936,6 +952,106 @@
         "url": "https://github.com/DDDMUC/dsh-free-search"
       },
       "versions": [
+        {
+          "version": "0.9.70",
+          "publishTimestamp": 1795010013,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
+          "version": "0.9.69",
+          "publishTimestamp": 1795004509,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
+          "version": "0.9.68",
+          "publishTimestamp": 1795003757,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
+          "version": "0.9.67",
+          "publishTimestamp": 1795001917,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
+          "version": "0.9.66",
+          "publishTimestamp": 1795000053,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
+          "version": "0.9.65",
+          "publishTimestamp": 1794999266,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
+          "version": "0.9.64",
+          "publishTimestamp": 1794998642,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
+          "version": "0.9.63",
+          "publishTimestamp": 1794997586,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
+          "version": "0.9.62",
+          "publishTimestamp": 1794995938,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
+          "version": "0.9.61",
+          "publishTimestamp": 1794993913,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
         {
           "version": "0.9.60",
           "publishTimestamp": 1794933689,
@@ -2280,18 +2396,30 @@
     {
       "name": "dsh-zotero",
       "title": {
-        "en": "dsh-zotero"
+        "en": "dsh-zotero",
+        "zh": "dsh-zotero"
       },
       "description": {
-        "en": "Zotero plugin for DeepSeek Harness: search and read papers in conversation, audit the literature trail, and browse the literature panel for citations and approved writes."
+        "en": "Zotero plugin for DeepSeek Harness: search and read papers in conversation, audit the literature trail, and browse the literature panel for citations and approved writes.",
+        "zh": "DeepSeek Harness 的本地 Zotero 插件：在对话中检索文献并核对文献轨迹，在文献面板里浏览全库、复制引用并受审批写入。"
       },
-      "icon": "https://cdn.jsdelivr.net/npm/dsh-zotero@1.3.0-alpha.1/docs/images/icon.png",
+      "icon": "https://cdn.jsdelivr.net/npm/dsh-zotero@1.3.0/docs/images/icon.png",
       "author": "Wenjie Xu",
       "homepage": "https://github.com/Vncntvx/dsh-zotero#readme",
       "repository": {
         "url": "https://github.com/Vncntvx/dsh-zotero"
       },
       "versions": [
+        {
+          "version": "1.3.0",
+          "publishTimestamp": 1795009721,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.2-rc.4 <0.3.0"
+          }
+        },
         {
           "version": "1.3.0-alpha.1",
           "publishTimestamp": 1794915843,
