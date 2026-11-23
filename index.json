@@ -501,11 +501,20 @@
         "en": "Preview, inspect, and edit real .op OpenPencil design documents inside DSH conversations — headless rendering, a read-only canvas, and a managed editor."
       },
       "icon": "https://avatars.githubusercontent.com/u/218180147?v=4",
-      "homepage": "https://github.com/ZSeven-W/dsh-openpencil#readme",
+      "homepage": "https://github.com/ZSeven-W/openpencil#readme",
       "repository": {
-        "url": "https://github.com/ZSeven-W/dsh-openpencil"
+        "url": "https://github.com/ZSeven-W/openpencil",
+        "directory": "packages/op-dsh"
       },
       "versions": [
+        {
+          "version": "0.1.0-rc.16",
+          "publishTimestamp": 1795394922,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
         {
           "version": "0.1.0-rc.15",
           "publishTimestamp": 1794339526,
@@ -739,6 +748,14 @@
       },
       "versions": [
         {
+          "version": "0.3.10",
+          "publishTimestamp": 1795343607,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
           "version": "0.3.9",
           "publishTimestamp": 1795259416,
           "source": {
@@ -960,6 +977,26 @@
         "url": "https://github.com/DDDMUC/dsh-free-search"
       },
       "versions": [
+        {
+          "version": "0.9.82",
+          "publishTimestamp": 1795347634,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
+          "version": "0.9.81",
+          "publishTimestamp": 1795345233,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
         {
           "version": "0.9.80",
           "publishTimestamp": 1795270268,
@@ -2471,13 +2508,23 @@
         "en": "Zotero plugin for DeepSeek Harness: search and read papers in conversation, audit the literature trail, and browse the literature panel for citations and approved writes.",
         "zh": "DeepSeek Harness 的本地 Zotero 插件：在对话中检索文献并核对文献轨迹，在文献面板里浏览全库、复制引用并受审批写入。"
       },
-      "icon": "https://cdn.jsdelivr.net/npm/dsh-zotero@1.4.0/docs/images/icon.png",
+      "icon": "https://cdn.jsdelivr.net/npm/dsh-zotero@1.5.0/docs/images/icon.png",
       "author": "Wenjie Xu",
       "homepage": "https://github.com/Vncntvx/dsh-zotero#readme",
       "repository": {
         "url": "https://github.com/Vncntvx/dsh-zotero"
       },
       "versions": [
+        {
+          "version": "1.5.0",
+          "publishTimestamp": 1795332481,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.2-rc.5 <0.3.0"
+          }
+        },
         {
           "version": "1.4.0",
           "publishTimestamp": 1795088581,
