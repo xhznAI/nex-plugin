@@ -679,6 +679,16 @@
       },
       "versions": [
         {
+          "version": "0.2.0",
+          "publishTimestamp": 1795514013,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.5 <0.3.0"
+          }
+        },
+        {
           "version": "0.1.8",
           "publishTimestamp": 1794452509,
           "source": {
@@ -740,7 +750,6 @@
       "description": {
         "en": "DS Bot: a team of long-lived Bots for DeepSeek Harness, with Main Bots, Bot-to-Bot messages and group chats"
       },
-      "icon": "https://avatars.githubusercontent.com/u/279467036?v=4",
       "homepage": "https://github.com/Fei2411/DS-Bot#readme",
       "repository": {
         "url": "https://github.com/Fei2411/DS-Bot",
@@ -977,6 +986,26 @@
         "url": "https://github.com/DDDMUC/dsh-free-search"
       },
       "versions": [
+        {
+          "version": "0.9.85",
+          "publishTimestamp": 1795513920,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
+          "version": "0.9.84",
+          "publishTimestamp": 1795450005,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
         {
           "version": "0.9.82",
           "publishTimestamp": 1795347634,
