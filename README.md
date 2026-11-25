@@ -44,6 +44,8 @@ Nex 精选收录适合研究、学习、创作与日常工作的插件，由官�
 | [OpenPencil](https://github.com/ZSeven-W/dsh-openpencil) | 在对话中预览、检查和编辑 OpenPencil 设计文档 | 创意、开发工具 |
 | [游戏工坊](https://github.com/ZSeven-W/dsh-game-studio) | 用自然语言制作小游戏，在侧栏试玩、替换美术素材并导出 HTML | 创意、开发工具 |
 | [DS Bot](https://github.com/Fei2411/DS-Bot) | 创建长期运行的助手，通过记忆、私信和群聊协作完成任务 | 办公效率、自动化 |
+| [Mnemon](https://github.com/omdsh-dev/dsh-mnemon) | 分层管理偏好、项目资料与长期记忆，按需召回并追溯来源；本地记忆空间需另装 Mnemon CLI | 记忆与上下文、办公效率 |
+| [dsh-context](https://github.com/bowenliang123/dsh-context) | 查看 Context 占用、Token 组成及变化，定位上下文开销并追踪压缩记录 | 记忆与上下文、界面增强 |
 | [Free Search](https://github.com/DDDMUC/dsh-free-search) | 为助手补充多引擎联网搜索，检索资料、核对信息 | 办公效率 |
 | [Our Free Model](https://github.com/Ebony-Vinyl/dsh-our-free-model) | 接入公共免费模型渠道，查看可用性与本机用量 | 外部服务 |
 
