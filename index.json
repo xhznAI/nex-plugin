@@ -270,18 +270,28 @@
     {
       "name": "@yunmiao/studymate",
       "title": {
-        "en": "@yunmiao/studymate"
+        "en": "StudyMate",
+        "zh": "StudyMate 学习搭档"
       },
       "description": {
-        "en": "StudyMate learning skills and lesson engine for DeepSeek Harness, Google Antigravity, Codex and ChatGPT Work."
+        "en": "An AI study partner for math and computer-science subjects: plan a route, then learn and practise one lesson at a time, with lesson pages rendered on demand in the reader.",
+        "zh": "面向数学与计算机科目的 AI 学习搭档：先定路线，再一节一节地讲与练，课件在阅读端按需渲染。"
       },
-      "icon": "https://avatars.githubusercontent.com/u/196646782?v=4",
+      "icon": "https://cdn.jsdelivr.net/npm/@yunmiao/studymate@2.1.0/docs/images/icon.png",
       "author": "Cattofu",
       "homepage": "https://github.com/Miaotofu01/Study-Mate#readme",
       "repository": {
         "url": "https://github.com/Miaotofu01/Study-Mate"
       },
       "versions": [
+        {
+          "version": "2.1.0",
+          "publishTimestamp": 1795621786,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
         {
           "version": "2.0.4",
           "publishTimestamp": 1793974605,
@@ -991,16 +1001,26 @@
         "zh": "上下文 (dsh-context)"
       },
       "description": {
-        "en": "Context insights and management, with dashboard, browser, dynamics and commands, for understanding how the context composites, and how it evolves.",
-        "zh": "上下文洞察与管理插件：提供跨会话的上下文仪表盘、上下文浏览器、上下文动态、/context 命令，看清上下文的构成与演变。"
+        "en": "DeepSeek Harness officially recommended context insight and management plugin provides a context browser, context trends, a multi-agent collaboration view, key context event insights, cross-session statistics, and tool call and command activity, giving you a complete picture of context composition, token usage, and evolution.",
+        "zh": "DeepSeek Harness官方推荐的上下文洞察与管理插件：提供上下文浏览器、上下文趋势、多Agent协作视图、关键上下文事件透视、跨会话统计，以及工具调用与命令动态，全面掌握上下文构成、Token使用与演变。"
       },
-      "icon": "https://cdn.jsdelivr.net/npm/dsh-context@0.87.1/icon.svg",
+      "icon": "https://cdn.jsdelivr.net/npm/dsh-context@0.87.2/icon.svg",
       "author": "bowenliang123",
       "homepage": "https://github.com/bowenliang123/dsh-context",
       "repository": {
         "url": "https://github.com/bowenliang123/dsh-context"
       },
       "versions": [
+        {
+          "version": "0.87.2",
+          "publishTimestamp": 1795662854,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 || >=0.2.1-rc.2 || >=0.2.2-rc.1"
+          }
+        },
         {
           "version": "0.87.1",
           "publishTimestamp": 1795371681,
