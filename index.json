@@ -772,12 +772,37 @@
       "description": {
         "en": "DS Bot: a team of long-lived Bots for DeepSeek Harness, with Main Bots, Bot-to-Bot messages and group chats"
       },
-      "homepage": "https://github.com/Fei2411/DS-Bot#readme",
+      "icon": "https://avatars.githubusercontent.com/u/359839545?v=4",
+      "homepage": "https://github.com/Fei-Craft/DS-Bot#readme",
       "repository": {
-        "url": "https://github.com/Fei2411/DS-Bot",
+        "url": "https://github.com/Fei-Craft/DS-Bot",
         "directory": "ds-bot"
       },
       "versions": [
+        {
+          "version": "0.4.2",
+          "publishTimestamp": 1795844182,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.4.1",
+          "publishTimestamp": 1795790505,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.4.0",
+          "publishTimestamp": 1795772540,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
         {
           "version": "0.3.10",
           "publishTimestamp": 1795343607,
@@ -1004,13 +1029,23 @@
         "en": "DeepSeek Harness officially recommended context insight and management plugin provides a context browser, context trends, a multi-agent collaboration view, key context event insights, cross-session statistics, and tool call and command activity, giving you a complete picture of context composition, token usage, and evolution.",
         "zh": "DeepSeek Harness官方推荐的上下文洞察与管理插件：提供上下文浏览器、上下文趋势、多Agent协作视图、关键上下文事件透视、跨会话统计，以及工具调用与命令动态，全面掌握上下文构成、Token使用与演变。"
       },
-      "icon": "https://cdn.jsdelivr.net/npm/dsh-context@0.87.2/icon.svg",
+      "icon": "https://cdn.jsdelivr.net/npm/dsh-context@0.88.0/icon.svg",
       "author": "bowenliang123",
       "homepage": "https://github.com/bowenliang123/dsh-context",
       "repository": {
         "url": "https://github.com/bowenliang123/dsh-context"
       },
       "versions": [
+        {
+          "version": "0.88.0",
+          "publishTimestamp": 1795830334,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 || >=0.2.1-rc.2 || >=0.2.2-rc.1"
+          }
+        },
         {
           "version": "0.87.2",
           "publishTimestamp": 1795662854,
@@ -2683,6 +2718,36 @@
         "url": "https://github.com/DDDMUC/dsh-free-search"
       },
       "versions": [
+        {
+          "version": "0.9.91",
+          "publishTimestamp": 1795848127,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
+          "version": "0.9.90",
+          "publishTimestamp": 1795814415,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
+        {
+          "version": "0.9.89",
+          "publishTimestamp": 1795771707,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.4.0-0"
+          }
+        },
         {
           "version": "0.9.88",
           "publishTimestamp": 1795598323,
